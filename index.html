@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SneakerStyle - Tênis Incríveis (Inspirado na Shein)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">SneakerStyle</h1>
+            <nav class="nav">
+                <a href="#lancamentos">Lançamentos</a>
+                <a href="#promocoes">Promoções</a>
+                <a href="#categorias">Categorias</a>
+            </nav>
+            <div class="icones-usuario">
+                <button id="btn-search">🔍</button>
+                <button id="btn-user">👤</button>
+                <button id="btn-cart">🛒 <span id="cart-count">0</span></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container">
+            <h2>🎉 SUPER OFERTAS: Tênis a partir de R$99,90! 🎉</h2>
+            <p>Frete Grátis em compras acima de R$150. Aproveite por tempo limitado.</p>
+            <a href="#promocoes" class="btn-cta">Compre Agora</a>
+        </div>
+    </section>
+
+    <section class="main-content container">
+        <aside class="sidebar">
+            <h3>Filtrar por</h3>
+            <div class="filtro-grupo">
+                <h4>Marca</h4>
+                <label><input type="checkbox" data-filter="nike"> Nike</label>
+                <label><input type="checkbox" data-filter="adidas"> Adidas</label>
+                <label><input type="checkbox" data-filter="puma"> Puma</label>
+            </div>
+            <div class="filtro-grupo">
+                <h4>Cor</h4>
+                <label><input type="checkbox" data-filter="branco"> Branco</label>
+                <label><input type="checkbox" data-filter="preto"> Preto</label>
+                <label><input type="checkbox" data-filter="colorido"> Colorido</label>
+            </div>
+        </aside>
+
+        <main class="product-grid" id="product-list">
+            <div class="product-card" data-marca="nike" data-cor="preto">
+                <img src="tenis-nike-air-max-97-futura-preto-CV31505(1)-750x937.png" alt="Tênis Nike Preto">
+                <div class="product-info">
+                    <p class="product-name">Tênis Urbano Style</p>
+                    <p class="product-price">R$ 145,90</p>
+                    <button class="btn-add-cart" data-id="1">Adicionar ao 🛒</button>
+                </div>
+            </div>
+             </main>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 SneakerStyle. Todos os direitos reservados. | Desenvolvido com HTML, CSS e JS.</p>
+    </footer>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Seu Carrinho</h3>
+            <ul id="cart-items">
+                </ul>
+            <p>Total: <span id="cart-total">R$ 0,

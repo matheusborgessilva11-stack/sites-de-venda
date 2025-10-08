@@ -1,0 +1,238 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Fundo claro para destacar produtos */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header (Barra de Navegação) */
+.header {
+    background-color: #fff; /* Fundo branco */
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sutil, mas presente */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #f52c72; /* Cor de destaque similar à Shein */
+    font-size: 1.8em;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #f52c72;
+}
+
+.icones-usuario button {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+    color: #333;
+}
+
+#cart-count {
+    background-color: #f52c72; /* Contagem no carrinho com destaque */
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8em;
+    position: relative;
+    top: -10px;
+    left: -5px;
+}
+
+/* Banner de Destaque (Atenção imediata) */
+.banner {
+    background-color: #ffe018; /* Cor vibrante para promoções */
+    color: #333;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.banner h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #f52c72;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: #d82565;
+}
+
+/* Conteúdo Principal e Grid de Produtos */
+.main-content {
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+}
+
+.filtro-grupo {
+    margin-bottom: 20px;
+}
+
+.filtro-grupo h4 {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.product-grid {
+    flex-grow: 1;
+    display: grid;
+    /* Grid denso: 3 colunas em desktop */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cards de Produto (Foco na imagem e preço) */
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px; /* Altura fixa para uniformidade */
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-name {
+    font-weight: normal;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 1.3em;
+    color: #ff0000; /* Preço em destaque para urgência/oferta */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-add-cart {
+    background-color: #000; /* Botão de ação principal */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-add-cart:hover {
+    background-color: #f52c72;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Estilo do Modal (Carrinho) */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* Centraliza verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
